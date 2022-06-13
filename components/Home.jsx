@@ -20,7 +20,6 @@ import TextTransition, { presets } from "react-text-transition";
 import ProductSlider from "../components/ProductSlider";
 import Image from "next/image";
 import { Wave } from "react-animated-text";
-
 import sp1 from "../public/img/sp1.png";
 import sp from "../public/img/sp.png";
 import fd from "../public/img/fd.png";

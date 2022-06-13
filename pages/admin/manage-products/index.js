@@ -112,7 +112,8 @@ export default function ManageProducts({ products }) {
                         src={product.img}
                         height={50}
                         width={50}
-                        quality={100}
+                      quality={100}
+                      alt={product.name}
                       />
                     </TableCell>
 
