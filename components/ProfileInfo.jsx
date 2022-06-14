@@ -25,6 +25,8 @@ import PasswordIcon from "@mui/icons-material/Password";
 import { useRouter } from "next/router";
 import { contextStore } from "../utils/Store";
 import axios from "axios";
+import Link from "next/link";
+import DashboardIcon from "@mui/icons-material/Dashboard";
 export default function ProfileInfo() {
   const [open, setOpen] = useState(false);
   const [err, setErr] = useState();
@@ -82,9 +84,21 @@ export default function ProfileInfo() {
   return (
     <Paper variant="outline">
       <List>
-        <ListItem sx={{ border: "1px solid #ccc", borderRadius: "6px" }}>
-          <Avatar alt={userInfo.name} src={userInfo.img} />
-        </ListItem>
+        {userInfo.isAdmin && (
+          <ListItem>
+            <ListItemIcon>
+              <DashboardIcon></DashboardIcon>
+            </ListItemIcon>
+            <ListItemText>
+              <Link href={"/admin"} passHref>
+                <a style={{ textDecoration: "none", color: "green" }}>
+                  Admin Dashboard
+                </a>
+              </Link>
+            </ListItemText>
+          </ListItem>
+        )}
+
         <ListItem>
           <ListItemIcon>
             <AccountCircleIcon></AccountCircleIcon>

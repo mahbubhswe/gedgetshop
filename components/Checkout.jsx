@@ -48,14 +48,13 @@ export default function Checkout() {
   const [country, setCountry] = useState();
   const [phone, setPhone] = useState();
   const [selectedPaymentM, setSelectedPaymentM] = useState();
-  const { state } = useContext(contextStore);
+  const { state, dispatch } = useContext(contextStore);
   const products = state.cart.cartItems;
   const { setUpRecaptcha } = useUserAuth();
   const router = useRouter();
   const [userInfo] = useLocalStorage("userInfo");
   const [cartInfo] = useLocalStorage("cartInfo");
   const [deliveryCharge] = useLocalStorage("deliveryCharge");
-
   //send opt
   const sendOtp = async (e) => {
     e.preventDefault();
@@ -86,6 +85,7 @@ export default function Checkout() {
         totalPrice:
           products.reduce((a, c) => a + c.price * c.qty, 0) + deliveryCharge,
       });
+      dispatch({ type: "CLEAR_CART" });
       router.push(data);
     } catch (error) {
       setError(error.message);
@@ -103,6 +103,7 @@ export default function Checkout() {
   };
   //confirm order
   const confirmOrder = async () => {
+    dispatch({ type: "CLEAR_CART" });
     try {
       await axios.post(
         "/api/order",
@@ -126,6 +127,7 @@ export default function Checkout() {
           },
         }
       );
+      dispatch({ type: "CLEAR_CART" });
       router.push("/order-confirmation");
     } catch (error) {
       setError(error.message);

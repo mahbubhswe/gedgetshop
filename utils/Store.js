@@ -17,6 +17,10 @@ const reducer = (state, action) => {
       deleteFromStorage("userInfo");
       return { ...state, userInfo: null };
     }
+    case "CLEAR_CART": {
+      deleteFromStorage("cartInfo");
+      return { ...state, cart: { ...state.cart, cartItems: null } };
+    }
     case "ADD_TO_CART": {
       let allredyIncart = false;
       const newItem = action.payload;
@@ -47,6 +51,7 @@ const reducer = (state, action) => {
       }
       return state;
     }
+
     case "CART_PLUS": {
       let newItem = action.payload;
       let exitItems = state.cart.cartItems.slice();
@@ -63,7 +68,7 @@ const reducer = (state, action) => {
       const exitItems = state.cart.cartItems.slice();
       exitItems.forEach((element) => {
         if (element.product === newItem.product) {
-          if (element.qty ===1) {
+          if (element.qty === 1) {
             alert("Sorry, you have reached in minimum quantity!");
             return state;
           }
