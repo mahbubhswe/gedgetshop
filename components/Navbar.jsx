@@ -17,7 +17,6 @@ import {
 import { useRouter } from "next/router";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import MenuIcon from "@mui/icons-material/Menu";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LoginIcon from "@mui/icons-material/Login";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { contextStore } from "../utils/Store";
@@ -90,9 +89,6 @@ function Navbar() {
             </form>
           </Box>
           <Box>
-            <IconButton href={"https://web.whatsapp.com/"}>
-              <WhatsAppIcon fontSize="large"></WhatsAppIcon>
-            </IconButton>
             <IconButton>
               <Link href={"/your-cart"} passHref>
                 <a>
