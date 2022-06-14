@@ -68,7 +68,7 @@ function Navbar() {
               <Stack direction={"row"}>
                 <TextField
                   color="secondary"
-                  sx={{ width: { xs: "150px", sm: "280px", md: "400px" } }}
+                  sx={{width:{xs:"250px",sm:"350px",md:"500px"}}}
                   variant="outlined"
                   size="small"
                   value={search}
@@ -87,22 +87,14 @@ function Navbar() {
               </Stack>
             </form>
           </Box>
-          <Box>
+          <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <IconButton>
               <Link href={"/your-cart"} passHref>
                 <a>
                   <Badge badgeContent={cartQty} color="secondary" showZero>
                     <ShoppingCartIcon
-                      sx={{
-                        fontSize: {
-                          xs: 25,
-                          sm: 30,
-                          md: 40,
-                          lg: 40,
-                          xl: 40,
-                          color: "gray",
-                        },
-                      }}
+                      sx={{ color: "gray" }}
+                      fontSize="large"
                     ></ShoppingCartIcon>
                   </Badge>
                 </a>
@@ -113,16 +105,8 @@ function Navbar() {
                 <Link href={"/your-profile"} passHref>
                   <a>
                     <AccountCircleIcon
-                      sx={{
-                        fontSize: {
-                          xs: 25,
-                          sm: 30,
-                          md: 40,
-                          lg: 40,
-                          xl: 40,
-                          color: "gray",
-                        },
-                      }}
+                      sx={{ color: "gray" }}
+                      fontSize="large"
                     ></AccountCircleIcon>
                   </a>
                 </Link>
@@ -130,16 +114,8 @@ function Navbar() {
                 <Link href={"/login"} passHref>
                   <a>
                     <LoginIcon
-                      sx={{
-                        fontSize: {
-                          xs: 25,
-                          sm: 30,
-                          md: 40,
-                          lg: 40,
-                          xl: 40,
-                          color: "gray",
-                        },
-                      }}
+                      sx={{ color: "gray" }}
+                      fontSize="large"
                     ></LoginIcon>
                   </a>
                 </Link>
@@ -167,7 +143,7 @@ function Navbar() {
             variant="bold"
             component={"span"}
             sx={{
-              fontSize: "25px",
+              fontSize: "23px",
               display: { sm: "block", md: "none" },
               paddingLeft: "60px",
               textShadow: "1px 2px",
@@ -176,6 +152,41 @@ function Navbar() {
           >
             <span style={{ color: "#FDAF0F" }}>GADGET</span>SHOP
           </Typography>
+          <Box sx={{ display: { xs: "bloc", sm: "none", marginLeft: "auto" } }}>
+            <IconButton>
+              <Link href={"/your-cart"} passHref>
+                <a>
+                  <Badge badgeContent={cartQty} color="secondary" showZero>
+                    <ShoppingCartIcon
+                      sx={{ color: "white" }}
+                      fontSize="dedium"
+                    ></ShoppingCartIcon>
+                  </Badge>
+                </a>
+              </Link>
+            </IconButton>
+            <IconButton>
+              {userInfo ? (
+                <Link href={"/your-profile"} passHref>
+                  <a>
+                    <AccountCircleIcon
+                      sx={{ color: "white" }}
+                      fontSize="dedium"
+                    ></AccountCircleIcon>
+                  </a>
+                </Link>
+              ) : (
+                <Link href={"/login"} passHref>
+                  <a>
+                    <LoginIcon
+                      sx={{ color: "white" }}
+                      fontSize="dedium"
+                    ></LoginIcon>
+                  </a>
+                </Link>
+              )}
+            </IconButton>
+          </Box>
         </Toolbar>
       </AppBar>
       <Drawer open={show} onClose={() => setShow(false)}>
