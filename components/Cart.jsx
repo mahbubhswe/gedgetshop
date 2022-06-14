@@ -56,7 +56,7 @@ function Cart() {
           <AlertTitle>Info</AlertTitle>
           Sorry, your cart is empty. Please,
           <strong>
-            <Link href={"/product/laptop"} passHref>
+            <Link href={"/"} passHref>
               <a> Go to shopping</a>
             </Link>
           </strong>
@@ -106,9 +106,9 @@ function Cart() {
                             >
                               <RemoveCircleOutlineIcon></RemoveCircleOutlineIcon>
                             </IconButton>
-                            <Typography component={"span"}>
-                              {product.qty}
-                            </Typography>
+
+                            {product.qty}
+
                             <IconButton
                               onClick={() =>
                                 dispatch({

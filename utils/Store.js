@@ -50,9 +50,8 @@ const reducer = (state, action) => {
     case "CART_PLUS": {
       let newItem = action.payload;
       let exitItems = state.cart.cartItems.slice();
-
       exitItems.forEach((element) => {
-        if (element.id === newItem.id) {
+        if (element.product === newItem.product) {
           element.qty++;
         }
       });
@@ -63,8 +62,8 @@ const reducer = (state, action) => {
       const newItem = action.payload;
       const exitItems = state.cart.cartItems.slice();
       exitItems.forEach((element) => {
-        if (element.id === newItem.id) {
-          if (element.qty == 0) {
+        if (element.product === newItem.product) {
+          if (element.qty ===1) {
             alert("Sorry, you have reached in minimum quantity!");
             return state;
           }
