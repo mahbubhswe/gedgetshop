@@ -94,8 +94,16 @@ function Navbar() {
                 <a>
                   <Badge badgeContent={cartQty} color="secondary" showZero>
                     <ShoppingCartIcon
-                      fontSize="large"
-                      sx={{ color: "gray" }}
+                      sx={{
+                        fontSize: {
+                          xs: 25,
+                          sm: 30,
+                          md: 40,
+                          lg: 40,
+                          xl: 40,
+                          color: "gray",
+                        },
+                      }}
                     ></ShoppingCartIcon>
                   </Badge>
                 </a>
@@ -106,8 +114,16 @@ function Navbar() {
                 <Link href={"/your-profile"} passHref>
                   <a>
                     <AccountCircleIcon
-                      fontSize="large"
-                      sx={{ color: "gray" }}
+                      sx={{
+                        fontSize: {
+                          xs: 25,
+                          sm: 30,
+                          md: 40,
+                          lg: 40,
+                          xl: 40,
+                          color: "gray",
+                        },
+                      }}
                     ></AccountCircleIcon>
                   </a>
                 </Link>
@@ -115,8 +131,16 @@ function Navbar() {
                 <Link href={"/login"} passHref>
                   <a>
                     <LoginIcon
-                      fontSize="large"
-                      sx={{ color: "gray" }}
+                      sx={{
+                        fontSize: {
+                          xs: 25,
+                          sm: 30,
+                          md: 40,
+                          lg: 40,
+                          xl: 40,
+                          color: "gray",
+                        },
+                      }}
                     ></LoginIcon>
                   </a>
                 </Link>

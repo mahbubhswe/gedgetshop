@@ -31,7 +31,8 @@ export default function Home() {
   const TEXTS = [
     "High quality product",
     "Easy return policy",
-    "Secure payment and faster delivery",
+    "Secure payment",
+    "Faster delivery system",
     "Be happy with us!",
   ];
 
