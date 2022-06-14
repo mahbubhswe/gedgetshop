@@ -68,10 +68,9 @@ function Navbar() {
               <Stack direction={"row"}>
                 <TextField
                   color="secondary"
-                  sx={{ width: { xs: "200px", sm: "300px", md: "400px" } }}
+                  sx={{ width: { xs: "150px", sm: "280px", md: "400px" } }}
                   variant="outlined"
                   size="small"
-                  fullWidth
                   value={search}
                   label={"Search your products..."}
                   placeholder={"Search by product name"}
