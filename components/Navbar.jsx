@@ -22,8 +22,9 @@ import LoginIcon from "@mui/icons-material/Login";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { contextStore } from "../utils/Store";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import NavItems from "./NavItems";
-export default function Navbar() {
+function Navbar() {
   const [show, setShow] = useState(false);
   const [search, setSearch] = useState();
   const { state } = useContext(contextStore);
@@ -231,3 +232,7 @@ export default function Navbar() {
     </>
   );
 }
+
+export default dynamic(() => Promise.resolve(Navbar), {
+  ssr: false,
+});

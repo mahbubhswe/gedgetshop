@@ -31,8 +31,8 @@ import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
 import { contextStore } from "../utils/Store";
-
-export default function Cart() {
+import dynamic from "next/dynamic";
+function Cart() {
   const [deliveryCharcg, setDeliveryCharge] = useState(0);
   const { state, dispatch } = useContext(contextStore);
   const router = useRouter();
@@ -201,3 +201,6 @@ export default function Cart() {
     </Container>
   );
 }
+export default dynamic(() => Promise.resolve(Cart), {
+  ssr: false,
+});

@@ -22,7 +22,8 @@ import { useRouter } from "next/router";
 import useLocalStorage from "@rehooks/local-storage";
 import { contextStore } from "../../utils/Store";
 import Login from "../../components/Login";
-export default function Admin({ pageTitle, children }) {
+import dynamic from "next/dynamic";
+function Admin({ pageTitle, children }) {
   const { dispatch } = useContext(contextStore);
   const [userInfo] = useLocalStorage("userInfo");
   const { isAdmin } = userInfo ? userInfo : false;
@@ -250,3 +251,6 @@ export default function Admin({ pageTitle, children }) {
     </>
   );
 }
+export default dynamic(() => Promise.resolve(Admin), {
+  ssr: false,
+});
