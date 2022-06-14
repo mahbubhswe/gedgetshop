@@ -16,6 +16,7 @@ import Link from "next/link";
 import MobileStore from "./MobileStore";
 import SocialMediaLink from "./SocialMediaLink";
 import Footer from "../components/Footer";
+import MessengerCustomerChat from "react-messenger-customer-chat";
 import TextTransition, { presets } from "react-text-transition";
 import ProductSlider from "../components/ProductSlider";
 import Image from "next/image";
@@ -388,6 +389,10 @@ export default function Home() {
         </Box>
         <Divider></Divider>
         <Footer></Footer>
+        <MessengerCustomerChat
+          pageId="103070385764123"
+          appId="411472610987693"
+        />
       </Stack>
     </>
   );
