@@ -34,7 +34,7 @@ export default function ManageCustomers({ customers }) {
   }
 
   return (
-    <Admin pageTitle={"Manage products"}>
+    <Admin pageTitle={"Manage customer"}>
       <TableContainer>
         <Table>
           <TableHead sx={{ background: "#0A1929" }}>

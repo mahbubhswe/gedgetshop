@@ -242,7 +242,7 @@ function Admin({ pageTitle, children }) {
           sx={{
             flex: 1,
             background: "#CFD8DC",
-            height: "100vh",
+            minHeight: "100vh",
           }}
         >
           {children ? children : <AdminDefaultPage />}
