@@ -32,9 +32,9 @@ export default function ProductSlider() {
   };
   return (
     <Carousel
-      swipeable={false}
-      draggable={false}
-      showDots={true}
+      swipeable={true}
+      draggable={true}
+      showDots={false}
       responsive={responsive}
       ssr={false} // means to render carousel on server-side.
       infinite={true}
