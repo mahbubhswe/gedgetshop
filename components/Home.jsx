@@ -288,8 +288,9 @@ export default function Home() {
                 data-aos-mirror="true"
                 data-aos-once="false"
                 data-aos-anchor-placement="top-center"
+                p={{ xs: "5px", sm: "10", md: "20" }}
               >
-                <Typography pt={5} pr={10} align="center">
+                <Typography align="center">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex,
                   necessitatibus praesentium nostrum architecto libero nisi iure
                   cum voluptate natus dolorem vel, debitis repellendus quam!
@@ -307,6 +308,7 @@ export default function Home() {
                 data-aos-mirror="true"
                 data-aos-once="false"
                 data-aos-anchor-placement="top-center"
+                p={{ xs: "5px", sm: "10", md: "20" }}
               >
                 <Image
                   src={rp}
