@@ -68,7 +68,7 @@ function Navbar() {
               <Stack direction={"row"}>
                 <TextField
                   color="secondary"
-                  sx={{width:{xs:"250px",sm:"350px",md:"500px"}}}
+                  sx={{ width: { xs: "250px", sm: "350px", md: "500px" } }}
                   variant="outlined"
                   size="small"
                   value={search}
@@ -126,7 +126,11 @@ function Navbar() {
       </Box>
       <AppBar
         position="sticky"
-        sx={{ backgroundColor: "#DB4040", boxShadow: "none" }}
+        sx={{
+          backgroundColor: "#DB4040",
+          boxShadow: "none",
+          borderBottom: "2px solid #028773",
+        }}
       >
         <Toolbar>
           <IconButton
