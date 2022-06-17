@@ -127,7 +127,7 @@ function Navbar() {
       <AppBar
         position="sticky"
         sx={{
-          backgroundColor: "#DB4040",
+          backgroundColor: "#CB5455",
           boxShadow: "none",
           borderBottom: "3px solid #028773",
         }}
