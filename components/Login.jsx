@@ -39,9 +39,9 @@ export default function SignIn({ urlPath, children }) {
       if (email.localeCompare(data.email) === 0) {
         dispatch({ type: "USER_LOGIN", payload: data });
         if (data.isAdmin) {
-        return  router.push("/admin");
+          return router.push("/admin");
         } else {
-        return router.push(urlPath ? urlPath : "/your-profile");
+          return router.push(urlPath ? urlPath : "/your-profile");
         }
       }
       setErr(data);
@@ -113,6 +113,9 @@ export default function SignIn({ urlPath, children }) {
             >
               Signin
             </Button>
+            <Typography component={"p"}>
+              Login as admin email:mahbub@gmail.com pass:123456
+            </Typography>
             <Typography component={"span"}>
               Are you new?
               <Link href={"/register"} passHref>
