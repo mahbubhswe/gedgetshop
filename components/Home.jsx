@@ -109,7 +109,7 @@ export default function Home() {
       </Box>
       <Stack>
         <Box sx={{ paddingY: "60px" }}>
-          <Container fixed sx={{ textAlign: "center" }}>
+          <Container fixed sx={{ display: "grid", placeContent: "center" }}>
             <Typography variant="bold" component="h1" py="40px">
               <Wave text="New Collections" effect="stretch" effectChange={2} />
             </Typography>
