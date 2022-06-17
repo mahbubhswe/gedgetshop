@@ -113,11 +113,12 @@ export default function Home() {
             <Typography variant="bold" component="h1" py="40px" align="center">
               <Wave text="New Collections" effect="stretch" effectChange={2} />
             </Typography>
-            <Typography component="div"  align="center">
-            <ProductSlider></ProductSlider>
-            </Typography>
-              
-            
+
+            <div
+              style={{ width: "100%", display: "grid", placeContent: "center" }}
+            >
+              <ProductSlider></ProductSlider>
+            </div>
           </Container>
         </Box>
         <Box sx={{ minHeight: "600px", width: "100%" }}>
