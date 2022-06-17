@@ -129,7 +129,7 @@ function Navbar() {
         sx={{
           backgroundColor: "#CB5455",
           boxShadow: "none",
-          borderBottom: "3px solid #028773",
+          borderBottom: "3px solid #FFDA00",
         }}
       >
         <Toolbar>
